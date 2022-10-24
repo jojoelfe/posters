@@ -1,0 +1,87 @@
+{% extends "poster.jinja2" %}
+
+{## Header ##}
+
+{% set poster_title = "Defocus Corrected Large Area Cryo-EM (DeCo-LACE) for Label-Free Detection of Molecules across Entire Cell Sections" %}
+{# ‘poster_subtitle’ is optional; use "" to hide it #}
+{% set poster_subtitle = "" %}
+{# Change ‘venue’ to a conference or workshop name if any #}
+{% set venue = "Unpublished" %}
+{# ‘webpage_title’ is displayed in the browser’s top bar #}
+{% set webpage_title = poster_title + " — " + poster_subtitle %}
+{# ‘project_url’ is used in the footer and for the logo #}
+{% set project_url = "https://github.com/cpitclaudel/academic-poster-template" %}
+
+{# Publication info is hidden by default (.publication-info in CSS) #}
+{% set pub_datetime_iso = "2020-09-08" %}
+{% set pub_date = "September 8, 2020" %}
+
+{% block custom_head %}
+<style type="text/css">
+  html { font-size: 1.15rem }
+</style>
+{% endblock %}
+
+{% block authors %}
+  {# Put authors here, with one link per author. #}
+  <a property="author">Johannes Elferich<sup>a</sup></a>
+  <a property="author">Giulia Schiroli<sup>b</sup></a>
+  <a property="author">David Scadden<sup>b</sup></a>
+  <a property="author">Nikolaus Grigorieff<sup>a</sup></a>
+{% endblock %}
+
+{% block affiliations %}
+  <sup>a</sup><a property="sourceOrganization">UMass Chan Medical School</a>
+  <sup>b</sup><a property="sourceOrganization">Harvard Medical School</a>
+{% endblock %}
+
+{# Project logos shown on the left side #}
+{% block project_logos %}
+  <a href="{{ project_url }}"><img src="logo.svg" alt="Tutorial logo"></a>
+{% endblock %}
+
+{# Extra logos shown on the right side #}
+{% block logos %}
+  <a href=""><img style="background: white" src="csail.png" alt="MIT CSAIL Logo"></a>
+{% endblock %}
+
+{### Footer ##}
+
+{% block project_link %}
+  <a href="{{ project_url }}">{{ project_url }}</a>
+{% endblock %}
+
+{% block contact_information %}
+  johannes.elferich@umassmed.edu
+{% endblock %}
+
+{### Contents ###}
+
+{# Contents are individual boxes (typically ‘article’s or ‘figure’s).  Each
+   ‘article’ contains a header and some contents. #}
+{% block contents %}
+  <article property="abstract">
+    {# Using <h3> inside the <header> makes the structure evident to screen readers #}
+    <header><h3>Abstract</h3></header>
+    <p>A major goal of biological imaging is localization of biomolecules inside a cell. Fluorescence microscopy can localize biomolecules inside whole cells
+      and tissues, but its ability to count biomolecules and accuracy of the spatial
+      coordinates is limited by the wavelength of visible light. Cryo-electron
+      microscopy (cryo-EM) provides highly accurate position and orientation
+      information of biomolecules but is often confined to small fields of view inside
+      a cell, limiting biological context. In this study we use a new data-acquisition
+      scheme called “Defocus-Corrected Large-Area cryo-EM” (DeCo-LACE) to collect
+      high-resolution images of entire sections (100 – 200 nm thick lamellae)
+      of neutrophil-like mouse cells, representing 1-2% of the total cellular
+      volume. We use 2D template matching (2DTM) to determine localization and orientation of the large ribosomal subunit in these sections. These data provide "maps" of ribosomes across entire sections of mammalian cells. This high-throughput cryo-EM data collection approach together with 2DTM will advance visual proteomics and provide biological insight that cannot be obtained by other methods. 
+    </p>
+  </article>
+
+  <article>
+    <figure>
+      <img src="matching_fff.svg" />
+      <figcaption>
+        60S detection in cross-section of a differentiated ER-HoxB8 cells
+      </figcaption>
+    </figure>
+  </article>
+{% endblock %}

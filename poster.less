@@ -124,19 +124,19 @@ b {
         flex-direction: column;
         flex-wrap: wrap;
         overflow: auto;
-        padding: @grid-gap / 2;
+        padding: calc(@grid-gap / 2);
 
         // This phantom element gives a bit of breathing room when scrolling
         &::after {
             content: " ";
             display: block;
             flex-basis: 100%;
-            width: @grid-gap / 2;
+            width: calc(@grid-gap / 2);
         }
 
         > * {
             flex-grow: 1;
-            margin: @grid-gap / 2;
+            margin: calc(@grid-gap / 2);
             max-width: @column-max-width;
             min-width: @column-min-width;
             width: 100% / @columns - 1%;
@@ -237,6 +237,7 @@ main {
         justify-self: center;
         max-width: 100%;
         vertical-align: middle;
+        background: white;
     }
 
     figure {

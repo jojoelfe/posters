@@ -1,4 +1,4 @@
-all: docs/tutorial/poster.html docs/koika/poster.html docs/poster.css
+all: docs/02012022/poster.html docs/tutorial/poster.html docs/koika/poster.html docs/poster.css
 
 docs/poster.css: poster.less
 	lessc --strict-units=on $< $@
