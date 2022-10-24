@@ -10,7 +10,7 @@
 {# ‘webpage_title’ is displayed in the browser’s top bar #}
 {% set webpage_title = poster_title + " — " + poster_subtitle %}
 {# ‘project_url’ is used in the footer and for the logo #}
-{% set project_url = "https://github.com/cpitclaudel/academic-poster-template" %}
+{% set project_url = "https://elferich.me" %}
 
 {# Publication info is hidden by default (.publication-info in CSS) #}
 {% set pub_datetime_iso = "2020-09-08" %}
@@ -31,18 +31,18 @@
 {% endblock %}
 
 {% block affiliations %}
-  <sup>a</sup><a property="sourceOrganization">UMass Chan Medical School</a>
-  <sup>b</sup><a property="sourceOrganization">Harvard Medical School</a>
+  <sup>a</sup><a property="sourceOrganization">University of Massachusetts Chan Medical School</a>
+  <sup>b</sup><a property="sourceOrganization">Massachusetts General Hospital</a>
 {% endblock %}
 
 {# Project logos shown on the left side #}
 {% block project_logos %}
-  <a href="{{ project_url }}"><img src="logo.svg" alt="Tutorial logo"></a>
+  <a href="{{ project_url }}"><img src="umcms.jpeg" alt="Tutorial logo"></a>
 {% endblock %}
 
 {# Extra logos shown on the right side #}
 {% block logos %}
-  <a href=""><img style="background: white" src="csail.png" alt="MIT CSAIL Logo"></a>
+  <a href=""><img style="background: white" src="hhmi.jpg" alt="MIT CSAIL Logo"></a>
 {% endblock %}
 
 {### Footer ##}
@@ -60,7 +60,7 @@
 {# Contents are individual boxes (typically ‘article’s or ‘figure’s).  Each
    ‘article’ contains a header and some contents. #}
 {% block contents %}
-  <article property="abstract">
+  <article property="abstract" style="width:39%;">
     {# Using <h3> inside the <header> makes the structure evident to screen readers #}
     <header><h3>Abstract</h3></header>
     <p>A major goal of biological imaging is localization of biomolecules inside a cell. Fluorescence microscopy can localize biomolecules inside whole cells
@@ -75,13 +75,48 @@
       volume. We use 2D template matching (2DTM) to determine localization and orientation of the large ribosomal subunit in these sections. These data provide "maps" of ribosomes across entire sections of mammalian cells. This high-throughput cryo-EM data collection approach together with 2DTM will advance visual proteomics and provide biological insight that cannot be obtained by other methods. 
     </p>
   </article>
-
-  <article>
+  
+  
+  <article style="width:39%;">
+    {# Using <h3> inside the <header> makes the structure evident to screen readers #}
+    <header><h3>2D Template Matching</h3></header>
     <figure>
-      <img src="matching_fff.svg" />
+      <img src="initmatching.png" />
+      <figcaption>
+        60S detections by 2DTM in lamella from differentiated ER-HoxB8 cell
+      </figcaption>
+    </figure>
+  </article>
+
+  <article style="width:39%;">
+    {# Using <h3> inside the <header> makes the structure evident to screen readers #}
+    <header><h3>DeCo-LACE</h3></header>
+    <figure>
+      <img src="approach.png" />
+      <figcaption>
+        60S detections by 2DTM in lamella from differentiated ER-HoxB8 cell
+      </figcaption>
+    </figure>
+  </article>
+
+  <article style="width:55%;">
+    <header><h3>Results</h3></header>
+    <figure>
+      <img src="matching_fff.png" />
       <figcaption>
         60S detection in cross-section of a differentiated ER-HoxB8 cells
       </figcaption>
     </figure>
+    <figure>
+      <img src="matching_euc.png" />
+      <figcaption>
+        60S detection in cross-section of a differentiated ER-HoxB8 cells
+      </figcaption>
+    </figure>
+  </article>
+
+  <article style="width:29%;">
+    <header><h3>Data analysis</h3></header>
+    
   </article>
 {% endblock %}

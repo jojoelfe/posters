@@ -9,7 +9,8 @@
             "command": "make all",
             "runOptions": {
                 "runOn": "default"
-            }
+            },
+            "problemMatcher": []
         }
     ]
 }

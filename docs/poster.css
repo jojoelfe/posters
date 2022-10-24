@@ -30,7 +30,7 @@ b {
   text-align: center;
   font-weight: 500;
 }
-@media all and (min-width: 60rem) {
+@media all {
   body {
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -60,13 +60,13 @@ b {
   main > * {
     flex-grow: 1;
     margin: calc(1rem / 2);
-    max-width: 30rem;
-    min-width: 22.5rem;
+    max-width: 50rem;
+    min-width: 10rem;
     width: 100% / 4 - 1%;
     width: calc(100% / 4 - 1rem);
   }
 }
-@media not all and (min-width: 60rem) {
+@media not all and (min-width: 100rem) {
   body > header,
   body > footer {
     grid-auto-flow: row;
@@ -107,6 +107,7 @@ body > header {
 }
 body > header img {
   max-height: 5rem;
+  max-width: 7rem;
 }
 body > header h1 {
   font-size: 1.5rem;

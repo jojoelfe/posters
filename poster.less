@@ -53,10 +53,10 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 //////////////////////
 
 @header-img-height: 5rem;
-
+@header-img-width: 7rem;
 @columns: 4;
-@column-min-width: 22.5rem;
-@column-max-width: 30rem;
+@column-min-width: 10.0rem;
+@column-max-width: 50rem;
 
 @thin-space: 0.25rem;
 @mid-space: 0.5rem;
@@ -103,7 +103,7 @@ b {
 }
 
 // https://stackoverflow.com/questions/42176419/targeting-flex-items-on-the-last-or-specific-row
-@media all and (min-width: 2 * @column-max-width) {
+@media all  {
     body {
         display: grid;
         grid-template-rows: auto 1fr auto;
@@ -191,6 +191,7 @@ body {
 
         img {
             max-height: @header-img-height;
+            max-width: @header-img-width;
         }
 
         h1 {
