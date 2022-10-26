@@ -44,7 +44,7 @@
     <main property="articleBody">
         <article property="abstract" style="width:39%;">
         <header><h3>Abstract</h3></header>
-    <p>A major goal of biological imaging is localization of biomolecules inside a cell. Fluorescence microscopy can localize biomolecules inside whole cells
+    <p class="medium">A major goal of biological imaging is localization of biomolecules inside a cell. Fluorescence microscopy can localize biomolecules inside whole cells
       and tissues, but its ability to count biomolecules and accuracy of the spatial
       coordinates is limited by the wavelength of visible light. Cryo-electron
       microscopy (cryo-EM) provides highly accurate position and orientation
@@ -62,8 +62,10 @@
         <header><h3>2D Template Matching</h3></header>
     <figure>
       <img src="initmatching.png" />
-      <figcaption>
-        60S detections by 2DTM in lamella from differentiated ER-HoxB8 cell
+      <figcaption class="small">
+        2D template matching of the large subunit of the ribosome in fib-milled neutrophil-like cells 
+(A) Overview image of the lamella. Major cellular regions are labeled, as Nucleus (Nuc), Mitochondria (M), and granular cytoplasm (GrCyt). FOVs where high-magnification images for template matching where acquired are indicated as boxes with the number of detected targets indicated on the bottom right. FOVs displayed in Panels B-E are color-coded. Scalebar corresponds to 1 μm.
+(B-E) FOVs with projection of detected LSUs shown in cyan. (B) Perinuclear region, the only detected targets are in the cytoplasmic half. (C) Cytoplasmic region with high density of ribosomes (D) Mitochondrium, as expected there are only detected LSUs in the cytoplasmic region (E) Cytoplasm, with low density of ribosomes. 
       </figcaption>
     </figure>
   </article>
@@ -72,8 +74,19 @@
         <header><h3>DeCo-LACE</h3></header>
     <figure>
       <img src="approach.png" />
-      <figcaption>
-        60S detections by 2DTM in lamella from differentiated ER-HoxB8 cell
+      <figcaption class="small">
+        DeCo-LACE approach (A) Graphic demonstrating the data-collection strategy for
+DeCo-LACE. The electron beam is condensed to a diameter $D_{Beam}$ that allows captured of
+the whole illuminated area on the camera. Beam-image shift along X and Y
+($BIS_X$,$$BIS_Y$) is used to scan the whole lamella
+(B) Diagram of the collection algorithm
+(C) Example overview image of a lamella with the designated acquisition
+positions and the used beam diameter indicated with red circles. Scalebar corresponds to 1 μm.
+(D+E) Representative micrographs takne with a condensed beam at eucentric focus
+(D) or fringe-free focus (E). Scalebar corresponds to 100 nm.
+(F) Boxplot of defocus measured by ctffind of micrographs taken by the DeCo-LACE
+approach on four lamellae images at eucentric focus and four lamellae imaged with
+fringe-free focus.
       </figcaption>
     </figure>
   </article>
